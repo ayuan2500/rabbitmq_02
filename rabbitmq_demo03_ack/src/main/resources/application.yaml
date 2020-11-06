@@ -1,0 +1,15 @@
+# 修改端口
+server:
+  port: 8081
+# 配置rabbitmq
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirms: true	# 开启confirms模式
+    publisher-returns: true 	# 开启returncallback模式
+    listener:
+      simple:
+        acknowledge-mode: manual  # 设置监听端消息ACK确认模式为手动确认
